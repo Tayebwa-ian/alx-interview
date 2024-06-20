@@ -26,11 +26,11 @@ def printer(codes_dict: dict, file_size: int) -> None:
         codes_int: A dict with codes and number of times their appear
         files_size: cumulative total size of the file
     """
-    print(f"File size: {file_size}")
+    print("File size: {}".format(file_size))
     ordered_codes = [int(key) for key in codes_dict.keys()]
     ordered_codes.sort()
     for code in ordered_codes:
-        print(f"{code}: {codes_dict[str(code)]}")
+        print("{}: {}".format(code, codes_dict[str(code)]))
 
 
 if "__main__" == __name__:
