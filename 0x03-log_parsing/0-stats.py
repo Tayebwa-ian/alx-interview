@@ -29,10 +29,13 @@ if "__main__" == __name__:
             files_size: cumulative total size of the file
         """
         print("File size: {}".format(file_size))
-        ordered_codes = [int(key) for key in codes_dict.keys()]
-        ordered_codes.sort()
-        for code in ordered_codes:
-            print("{}: {}".format(code, codes_dict[str(code)]))
+        try:
+            ordered_codes = [int(key) for key in codes_dict.keys()]
+            ordered_codes.sort()
+            for code in ordered_codes:
+                print("{}: {}".format(code, codes_dict[str(code)]))
+        except ValueError as e:
+            pass
 
     file_size: int = 0
     possible_codes = ["200", "301", "400", "401", "403", "404", "405", "500"]
