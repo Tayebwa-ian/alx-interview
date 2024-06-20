@@ -53,10 +53,8 @@ if __name__ == "__main__":
                         codes[line_list[-2]] += 1
                     else:
                         codes[line_list[-2]] = 1
-                if tally == 10:
+                if tally % 10 == 0:
                     printer(codes, file_size)
-                    tally = 0
-                    codes.clear()
     except KeyboardInterrupt as err:
         printer(codes, file_size)
         raise
