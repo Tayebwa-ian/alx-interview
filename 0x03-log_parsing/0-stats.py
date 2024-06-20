@@ -8,7 +8,7 @@ if __name__ == "__main__":
     import sys
     import re
 
-    def line_checker(line: str) -> list:
+    def line_checker(line):
         """
         Check the line if it comforms with certain predefined rules
         Arg:
@@ -21,7 +21,7 @@ if __name__ == "__main__":
             return line_split_list
         return []
 
-    def printer(codes_dict: dict, file_size: int) -> None:
+    def printer(codes_dict, file_size):
         """
         Print output to the stdout
         Arg:
@@ -37,14 +37,14 @@ if __name__ == "__main__":
         except ValueError as e:
             pass
 
-    file_size: int = 0
+    file_size = 0
     possible_codes = ["200", "301", "400", "401", "403", "404", "405", "500"]
-    codes: dict = {}
-    tally: int = 0
+    codes = {}
+    tally = 0
     try:
         for line in sys.stdin:
-            line: str = line.rstrip()
-            line_list: list = line_checker(line)
+            line = line.rstrip()
+            line_list = line_checker(line)
             if len(line_list) > 1:
                 tally += 1
                 file_size += int(line_list[-1])
