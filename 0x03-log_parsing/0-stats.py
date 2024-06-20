@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Log Parsing
+Log Parsing Script
 """
 import sys
 import re
@@ -35,6 +35,7 @@ def printer(codes_dict: dict, file_size: int) -> None:
 
 
 if "__main__" == __name__:
+
     file_size: int = 0
     possible_codes = ["200", "301", "400", "401", "403", "404", "405", "500"]
     codes: dict = {}
