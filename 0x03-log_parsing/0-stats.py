@@ -8,7 +8,6 @@ if "__main__" == __name__:
     import sys
     import re
 
-
     def line_checker(line: str) -> list:
         """
         Check the line if it comforms with certain predefined rules
@@ -22,7 +21,6 @@ if "__main__" == __name__:
             return line_split_list
         return []
 
-
     def printer(codes_dict: dict, file_size: int) -> None:
         """
         Print output to the stdout
@@ -35,7 +33,6 @@ if "__main__" == __name__:
         ordered_codes.sort()
         for code in ordered_codes:
             print("{}: {}".format(code, codes_dict[str(code)]))
-
 
     file_size: int = 0
     possible_codes = ["200", "301", "400", "401", "403", "404", "405", "500"]
