@@ -14,8 +14,9 @@ def line_checker(line: str) -> list:
     """
     pattern = r'\"GET /projects/260 HTTP/1.1\"'
     match = re.search(pattern, line)
-    if match:
-        return line.split(" ")
+    line_split_list = line.split(" ")
+    if match and line_split_list > 7:
+        return line_split_list
     return []
 
 
@@ -42,7 +43,7 @@ if "__main__" == __name__:
         for line in sys.stdin:
             line: str = line.rstrip()
             line_list: list = line_checker(line)
-            if len(line_list) > 7:
+            if len(line_list) > 1:
                 tally += 1
                 file_size += int(line_list[-1])
                 if line_list[-2] in possible_codes:
