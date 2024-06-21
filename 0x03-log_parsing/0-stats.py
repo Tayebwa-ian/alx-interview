@@ -55,6 +55,7 @@ if __name__ == "__main__":
                         codes[line_list[-2]] = 1
                 if tally % 10 == 0:
                     printer(codes, file_size)
+        printer(codes, file_size)
     except KeyboardInterrupt as err:
         printer(codes, file_size)
         raise
