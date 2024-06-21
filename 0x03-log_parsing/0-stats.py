@@ -17,7 +17,7 @@ if __name__ == "__main__":
         pattern = r'\"GET /projects/260 HTTP/1.1\"'
         match = re.search(pattern, line)
         line_split_list = line.split(" ")
-        if match and len(line_split_list) > 7:
+        if match and len(line_split_list) > 5:
             return line_split_list
         return []
 
