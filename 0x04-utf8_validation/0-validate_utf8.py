@@ -23,4 +23,7 @@ def validUTF8(data):
     if data[4:]:
         return validUTF8(data[4:])
     else:
+        for i in data:
+            if i > 127:
+                return False
         return True
