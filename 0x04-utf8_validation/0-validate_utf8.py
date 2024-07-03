@@ -28,4 +28,4 @@ def validUTF8(data):
                 if i > 127:
                     return False
             return True
-    return False
+    return True
