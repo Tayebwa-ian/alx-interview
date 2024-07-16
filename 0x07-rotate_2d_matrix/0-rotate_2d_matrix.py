@@ -10,11 +10,6 @@ def rotate_2d_matrix(matrix):
     Arg:
         matrix: a list of lists (assumed to be square)
     """
-    matrix_len = len(matrix)
-    if matrix_len % 2 == 1:
-        mid = matrix_len // 2 + 1
-    else:
-        mid = matrix_len / 2
     # transpose the matrix
     for i, row in enumerate(matrix):
         for j, el in enumerate(row):
