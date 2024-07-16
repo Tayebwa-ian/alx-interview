@@ -17,8 +17,6 @@ def rotate_2d_matrix(matrix):
         mid = matrix_len / 2
     # transpose the matrix
     for i, row in enumerate(matrix):
-        if i > mid:
-            break
         for j, el in enumerate(row):
             if j == i:
                 break
@@ -27,10 +25,4 @@ def rotate_2d_matrix(matrix):
                 matrix[j][i] = el
     # reverse the matrix
     for row in matrix:
-        row_len = len(row)
-        for i in range(row_len):
-            if i > (row_len // 2):
-                break
-            temp = row[i]
-            row[i] = row[-1 - i]
-            row[-1 - i] = temp
+        row.reverse()
