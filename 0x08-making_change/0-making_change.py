@@ -12,7 +12,9 @@ def makeChange(coins: list, total: int) -> int:
         total: the amount to change
     """
     num_of_min_coins = 0
-    if total > 0:
+    if total <= 0:
+        return 0
+    else:
         # sort and reverse the list of coins
         coins = sorted(coins)[::-1]
         for coin in coins:
